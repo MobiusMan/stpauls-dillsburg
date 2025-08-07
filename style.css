@@ -1,0 +1,462 @@
+/*
+Theme Name: St. Paul's Lutheran Church
+Description: Theme for St. Paul's Lutheran Church in Dillsburg
+Author: Andy Buffington
+Version: 3.4
+*/
+
+:root {
+    --primary-purple: #4B0082;
+    --secondary-gold: #FFD700;
+    --white-purity: #FFFFFF;
+    --text-dark: #333333;
+    --background-light: #F8F8F8;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    color: var(--text-dark);
+    background-color: var( --white-purity);
+    line-height: 1.6;
+    margin: 0;
+	padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--primary-purple);
+    color: var(--white-purity);
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    background-color: var(--secondary-gold);
+    padding: 0.5rem 1rem;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000;
+    width: 100%;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.navbar-nav .nav-link {
+    color: var(--text-dark) !important;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-purple) !important;
+}
+
+.nav-item {
+    margin: 0 0.5rem;
+}
+
+footer {
+    background-color: var(--primary-purple);
+    color: var(--white-purity);
+    padding: 1rem;
+}
+
+a {
+    color: var(--primary-purple);
+}
+
+a:hover {
+    color: var(--secondary-gold);
+}
+
+h1 {
+	text-transform: uppercase;
+	font-size: 1.75rem;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+
+h2 {
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+
+h3 {
+	color: var(--primary-purple);
+	font-size: 1.25rem;
+	font-weight: 600;
+	font-family: sans-serif;
+	
+}
+
+p {
+	font-size: 1rem;
+}
+
+article {
+	margin: 0;
+	padding: 0;
+}
+
+/* Full width and height for single pages and static pages */
+.full-width-height {
+    width: 100%;
+    min-height: 100vh;
+	margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to top instead of center */
+}
+
+.full-width-height article {
+    max-width: 100%;
+    margin: 0;
+}
+
+.full-width-height content {
+    width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.container-page {
+	padding: 2rem;
+	margin-top: 1.5rem;
+}
+
+.container-page-secondary {
+	padding: 2rem;
+}
+
+.em {
+	padding: 1rem;
+}
+
+/* Logo styling in header */
+.custom-logo-link {
+    display: inline-block;
+    line-height: 1;
+}
+
+.custom-logo {
+    max-width: 400px;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Dropdown menu styling */
+.navbar-nav .dropdown-menu {
+    background-color: var(--secondary-gold);
+    border: 1px solid var(--primary-purple);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    min-width: 200px;
+}
+
+.dropdown-item {
+    color: var(--text-dark);
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.dropdown-item:hover {
+    background-color: var(--primary-purple);
+    color: var(--white-purity);
+}
+
+/* Donate button styling */
+.btn-donate {
+    background-color: var(--white-purity);
+    color: var(--text-dark);
+    border: 1px solid var(--white-purity);
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-donate:hover {
+    background-color: var(--secondary-gold);
+    color: var(--text-dark);
+    border-color: var(--secondary-gold);
+}
+
+/* Fade-in animation for text */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Worship times button and modal styling */
+.btn-worship-times {
+    background-color: var(--primary-purple);
+    color: var(--white-purity);
+    border: 1px solid var(--white-purity);
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.btn-worship-times:hover {
+    background-color: var(--secondary-gold);
+    color: var(--text-dark);
+    border-color: var(--secondary-gold);
+}
+
+#worshipTimesModal .modal-content {
+    background-color: var(--white-purity);
+    border: 2px solid var(--primary-purple);
+}
+
+#worshipTimesModal .modal-header {
+    background-color: var(--primary-purple);
+    color: var(--white-purity);
+    border-bottom: 1px solid var(--secondary-gold);
+}
+
+#worshipTimesModal .modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#worshipTimesModal .modal-body {
+    color: var(--text-dark);
+    padding: 1.5rem;
+}
+
+#worshipTimesModal .modal-body p {
+    margin-bottom: 1rem;
+}
+
+#worshipTimesModal .modal-footer {
+    border-top: 1px solid var(--secondary-gold);
+}
+
+#worshipTimesModal .btn-secondary {
+    background-color: var(--primary-purple);
+    border-color: var(--white-purity);
+    color: var(--white-purity);
+}
+
+#worshipTimesModal .btn-secondary:hover {
+    background-color: var(--secondary-gold);
+    color: var(--text-dark);
+    border-color: var(--secondary-gold);
+}
+
+/* Newsletter page styling */
+.page-id-publications .entry-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.page-id-publications .entry-title {
+    color: var(--primary-purple);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.page-id-publications .entry-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Style for the PDF plugin container and links */
+.page-id-publications .pdf-plugin-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.page-id-publications .bsk-pdfm-list-item {
+    background-color: var(--white-purity);
+    border: 1px solid var(--primary-purple);
+    border-radius: 5px;
+    padding: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.page-id-publications .bsk-pdfm-list-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.page-id-publications .bsk-pdfm-list-item a {
+    color: var(--primary-purple);
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.page-id-publications .bsk-pdfm-list-item a:hover {
+    color: var(--secondary-gold);
+    text-decoration: underline;
+}
+
+.page-id-publications .bsk-pdfm-list-item a::before {
+    content: '\f1c1'; /* Font Awesome PDF icon (Unicode) - assuming Font Awesome is available; if not, replace with Bootstrap Icons */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: var(--primary-purple);
+}
+
+.page-id-publications .bsk-pdfm-list-item a:hover::before {
+    color: var(--secondary-gold);
+}
+
+/* Ensure horizontal navbar and hover dropdown for desktop */
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+    }
+    .navbar-nav {
+        flex-direction: row !important;
+        align-items: center;
+    }
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+    .dropdown-menu {
+        margin-top: 0;
+    }
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 991px) {
+    .navbar-nav {
+        flex-direction: column !important;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .nav-item {
+        margin: 0.25rem 0;
+    }
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        border: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .full-width-height {
+        padding: 2rem;
+    }
+    .custom-logo {
+        max-width: 300px;
+    }
+    .page-id-publications .entry-title {
+        font-size: 1.5rem;
+    }
+    .page-id-publications .bsk-pdfm-list-item {
+        padding: 0.75rem;
+    }
+    .page-id-publications .bsk-pdfm-list-item a {
+        font-size: 1rem;
+    }
+    #worshipTimesModal .modal-title {
+        font-size: 1.25rem;
+    }
+    #worshipTimesModal .modal-body {
+        padding: 1rem;
+    }
+}
+
+.carousel-sizing {
+	 max-height: 225px;
+	max-width: 300px;
+}
+
+.btn-purple {
+	background-color: var(--primary-purple);
+	color: var(--white-purity);
+	transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.btn-purple:hover {
+	background-color: var(--secondary-gold);
+    color: var(--text-dark);
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.latest-post img {
+    max-height: 200px; /* Adjust image height */
+    object-fit: cover; /* Ensure image fills space */
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh; /* Ensure visibility */
+    min-height: 300px;
+	margin: 0;
+	padding: 0;
+}
+
+.parallax-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+}
+
+.parallax-caption h3 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.parallax-caption p {
+    font-size: 1.2rem;
+}
+
+.parallax-1 {
+    background-image: url('https://stpaulsdillsburg.com/wp-content/uploads/2025/05/church-building-bg.jpg');
+}
+
+.parallax-2 {
+    background-image: url('https://stpaulsdillsburg.com/wp-content/uploads/2025/05/stained-glass-bg.jpg');
+}
+
+.parallax-3 {
+    background-image: url('https://stpaulsdillsburg.com/wp-content/uploads/2025/05/events-home-bg.jpg');
+}
